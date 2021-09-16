@@ -1,0 +1,18 @@
+List<WebElement> tableRows = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr"));
+//
+        // Using loop with .size() can count how many tr we have
+
+        String columnFirst = "//table[@id='ctl00_MainContent_orderGrid']//tr[";
+        String columnLast = "]//td";
+        String column;
+        List<WebElement> tableColumns;
+        for (int i = 0; i <= tableRows.size(); i++) {
+            column = columnFirst + i + columnLast;
+
+            tableColumns = driver.findElements(By.xpath(column));
+
+            for (int j = 0; j < tableColumns.size(); j++) {
+                System.out.print(tableColumns.get(j).getText() + " ");
+            }
+            System.out.println();
+        }

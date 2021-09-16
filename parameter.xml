@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://secure.smartbearsoftware.com/samples/testcomplete12/weborders/Default.aspx"/>
+    <test name="parameterstest">
+
+        <classes>
+            
+            <class name="TestCases.CheckAll"/>
+        </classes>
+
+    </test>
+</suite>
